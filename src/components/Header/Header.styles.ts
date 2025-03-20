@@ -24,7 +24,7 @@ export const LogoWrapper = styled.div`
     height: 100px;
     margin: 0 auto;
     position: relative;
-    margin-left: 43rem;
+    margin-left: 48rem;
 
     @media (max-width: 1024px) {
     margin-left: 0; /* remove no tablet */

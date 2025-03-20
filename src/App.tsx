@@ -1,4 +1,5 @@
 import { Header } from "@components/Header/Header";
+import { Home } from "@components/Home/Home";
 import GlobalStyles from '../GlobalStyles';
 import  Squares  from './effects/Squares'
 
@@ -13,7 +14,12 @@ export default function App() {
         hoverFillColor="#111"
       />
     <GlobalStyles />
+
+
+
     <Header />
+
+    <Home />
     </>
   );
 }
