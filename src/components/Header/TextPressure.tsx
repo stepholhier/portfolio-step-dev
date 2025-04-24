@@ -165,6 +165,7 @@ const TextPressure: React.FC<TextPressureProps> = ({
                 width: '100%',
                 height: '100%',
                 background: 'transparent',
+                left: '-20px',
             }}
         >
             <style>{`
