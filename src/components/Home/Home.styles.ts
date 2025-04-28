@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   font-size: 16px;
   text-align: left;
+  background-color: transparent;
 `;
 
 export const BrandWrapper = styled.div`
@@ -53,6 +54,7 @@ export const PerfilSection = styled.section`
   padding: 4rem 3rem;
   background-color: transparent;
   flex-wrap: wrap;
+  margin-top: 130px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -85,6 +87,7 @@ export const TextBottom = styled.div`
   font-size: 75px;
   color: #fff;
   font-weight: bold;
+  margin-bottom: 50px;
 
   @media (max-width: 767px) {
     font-size: 70px;
@@ -100,25 +103,7 @@ export const StyledVideo = styled.video`
   }
 `;
 
-export const TextAbout = styled.div`
-    font-size: 1rem;
-    width: 90%;
-    line-height: 2;
-    margin-top: 40px;
-    white-space: normal;
-  word-break: break-word;
-
-  p + p {
-    margin-top: 1.2rem;
-  }
-`; 
-
-
 export const ProjectsSection = styled.div`
-  
+  background: transparent;
 `;
 
-
-export const TitleRow = styled.div`
-
-`;
