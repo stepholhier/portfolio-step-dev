@@ -10,6 +10,11 @@ const GlobalStyles: React.FC = () => (
         box-sizing: border-box;
       }
 
+      html {
+      scroll-behavior: smooth;
+      }
+
+
       body {
         font-family: 'Arial', sans-serif;
         background-color: #000;

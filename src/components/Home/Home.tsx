@@ -59,9 +59,6 @@ export function Home() {
             />
             </TextBottom>
 
-            
-
-
             </BlurTextWrapper>
 
 

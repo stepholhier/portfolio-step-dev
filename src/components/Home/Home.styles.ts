@@ -107,3 +107,32 @@ export const ProjectsSection = styled.div`
   background: transparent;
 `;
 
+export const InfiniteMenuWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const HoverOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+`;
+
+export const HoverText = styled.div`
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+  line-height: 1.5;
+`;
