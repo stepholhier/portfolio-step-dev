@@ -94,6 +94,27 @@ export const TextBottom = styled.div`
   }
 `;
 
+export const TextAbout = styled.div`
+  color: white;
+  word-break: break-all;
+  line-height: 1.4;
+  width: 80%;
+  font-size: 1.2rem;
+  `;
+
+export const ButtonContact = styled.div`
+    color: #666;
+    margin-top: 60px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.3s;
+  
+    :hover {
+      color: #939292;
+      transition: 0.3s;
+    }
+  `;
+
 export const StyledVideo = styled.video`
   width: 100%;
   height: 680px;
@@ -107,32 +128,4 @@ export const ProjectsSection = styled.div`
   background: transparent;
 `;
 
-export const InfiniteMenuWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-`;
 
-export const HoverOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 2;
-  transition: opacity 0.3s ease;
-`;
-
-export const HoverText = styled.div`
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 20px;
-  max-width: 80%;
-  line-height: 1.5;
-`;

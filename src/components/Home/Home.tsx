@@ -6,6 +6,8 @@ import {
     BlurTextWrapper, 
     TextTop, 
     TextBottom,
+    TextAbout,
+    ButtonContact,
     PerfilSection,
     FotoPerfil,
 
@@ -16,6 +18,7 @@ import { Projects } from "./Projects";
 import BlurText from "@/effects/BlurText";
 
 import MinhaFoto from '@assets/FotoPort.png';
+import { ArrowUpRight } from "phosphor-react";
 
 
 export function Home() {
@@ -59,14 +62,21 @@ export function Home() {
             />
             </TextBottom>
 
-            </BlurTextWrapper>
+            <TextAbout>
+                <p>Sou desenvolvedor Front-end com mais de 4 anos de experiência criando interfaces que não só funcionam, mas encantam. Trabalho com React.js, Shopify, WordPress 
+                    e um mix de tecnologias que me permite transformar 
+                    ideias em projetos reais — com performance, responsividade e foco na experiência do usuário.</p>
+                <ButtonContact>
+                    Saiba mais <ArrowUpRight size={14} />
+                </ButtonContact>
+            </TextAbout>
 
+            </BlurTextWrapper>
 
             <FotoPerfil src={MinhaFoto} /> 
 
             </PerfilSection>
-
-
+            
             <Projects />
             
         </Container>

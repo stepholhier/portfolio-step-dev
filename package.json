@@ -11,6 +11,7 @@
     "vercel-build": "npm install --legacy-peer-deps && npm run build"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
     "framer-motion": "^12.9.2",
     "gl-matrix": "^3.4.3",
     "gsap": "^3.12.7",

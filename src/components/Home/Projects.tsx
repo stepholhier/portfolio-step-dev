@@ -1,9 +1,10 @@
 /** @jsxImportSource @emotion/react */
-import { useState } from 'react';
-import { ProjectsSection, InfiniteMenuWrapper, HoverOverlay, HoverText } from "./Home.styles";
+import { ProjectsSection } from "./Home.styles";
 
 import ScrollFloat from "@/effects/ScrollFloat";
 import InfiniteMenu from "@/effects/InfiniteMenu";
+
+import analyzerImg from '@assets/imgRight.png';
 
 interface MenuItem {
   image: string;
@@ -13,15 +14,13 @@ interface MenuItem {
 }
 
 export function Projects() {
-  const [activeItem, setActiveItem] = useState<MenuItem | null>(null);
-  const [isHovered, setIsHovered] = useState(false);
 
   const items: MenuItem[] = [
     {
-      image: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
-      link: 'https://google.com/',
-      title: 'Item 1',
-      description: 'Descrição do Projeto 1'
+      image: analyzerImg,
+      link: 'https://analyzer-sage.vercel.app/',
+      title: 'Analyzer',
+      description: 'Projeto com foco em análise de sites para melhor perfomance.'
     },
     {
       image: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
@@ -56,23 +55,10 @@ export function Projects() {
         Projetos
       </ScrollFloat>
 
-      <InfiniteMenuWrapper
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+     
         <InfiniteMenu 
-          items={items} 
-          onActiveItemChange={setActiveItem} // Passa callback para pegar o item ativo
+          items={items}
         />
-
-        {isHovered && activeItem && (
-          <HoverOverlay>
-            <HoverText>
-              {activeItem.description || 'Projeto sem descrição.'}
-            </HoverText>
-          </HoverOverlay>
-        )}
-      </InfiniteMenuWrapper>
 
     </ProjectsSection>
   );
