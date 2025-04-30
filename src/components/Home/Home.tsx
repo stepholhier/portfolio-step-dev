@@ -20,6 +20,8 @@ import BlurText from "@/effects/BlurText";
 import MinhaFoto from '@assets/FotoPort.png';
 import { ArrowUpRight } from "phosphor-react";
 
+import { Link } from "react-router-dom";
+
 
 export function Home() {
 
@@ -66,9 +68,11 @@ export function Home() {
                 <p>Sou desenvolvedor Front-end com mais de 4 anos de experiência criando interfaces que não só funcionam, mas encantam. Trabalho com React.js, Shopify, WordPress 
                     e um mix de tecnologias que me permite transformar 
                     ideias em projetos reais — com performance, responsividade e foco na experiência do usuário.</p>
+                <Link to="/sobre">
                 <ButtonContact>
                     Saiba mais <ArrowUpRight size={14} />
                 </ButtonContact>
+                </Link>
             </TextAbout>
 
             </BlurTextWrapper>
@@ -78,6 +82,7 @@ export function Home() {
             </PerfilSection>
             
             <Projects />
+
             
         </Container>
     );

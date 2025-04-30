@@ -12,13 +12,19 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
+    "@react-three/drei": "^10.0.7",
+    "@react-three/fiber": "^9.1.2",
+    "@react-three/rapier": "^2.1.0",
     "framer-motion": "^12.9.2",
     "gl-matrix": "^3.4.3",
     "gsap": "^3.12.7",
+    "meshline": "^3.3.1",
     "phosphor-react": "^1.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "styled-components": "^6.1.16"
+    "react-router-dom": "^7.5.3",
+    "styled-components": "^6.1.16",
+    "three": "^0.176.0"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.13.5",
