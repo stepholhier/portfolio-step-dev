@@ -1,11 +1,21 @@
 import { LogoWrapper } from "../Header/Header.styles";
 import TextPressure from "../Header/TextPressure";
 
-import { Container, MenuFooter, ButtonsWrapperFooter, GitHubLogo } from "./Footer.styles";
+import { Container, 
+         ContentFooter,
+         MenuFooter, 
+         ButtonsWrapperFooter, 
+         GitHubLogo,
+         BgFooterContainer,
+         BgFooterImg,
+         BgFooterText,
+         BgFooterButton, } from "./Footer.styles";
 
 import { Link } from 'react-router-dom';
 
 import GitHubLogoImg from '@assets/GitHubLogo.svg';
+import BgFooter from '@assets/imgFooternew.png';
+import ShinyButton from "../Header/ShinyButton";
 
 export function Footer() {
     
@@ -13,11 +23,29 @@ export function Footer() {
 
     return (
         <Container>
+            <BgFooterContainer>
+            
+            <BgFooterImg src={BgFooter} />
+                
+                <BgFooterText>
+                Mantenha contato
+                <p>Entre em contato e vamos dar vida às suas ideias! Estou aqui para colaborar e criar mágica digital.</p>
+                </BgFooterText>
+                
+                <BgFooterButton>
+                <a href="https://wa.me/5511952401991?text=Ol%C3%A1%2C%20estou%20acessando%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20saber%20mais..">
+                    <ShinyButton text="Contate-me"/>
+                </a>
+                </BgFooterButton>
+            
+            </BgFooterContainer>
+
+            <ContentFooter>
             {/* Logo centralizado */}
             <LogoWrapper>
                 <Link to="/">
                     <TextPressure
-                        text="step.dev"
+                        text="<stephanolhier/>"
                         minFontSize={24}
                         flex={false}
                         stroke={false}
@@ -33,7 +61,7 @@ export function Footer() {
                         {item === 'Sobre' ? (
                             <Link to="/sobre">{item}</Link>
                         ) : item === 'Projetos' ? (
-                            <a href="#projetos">{item}</a>
+                            <Link to="/#projetos">{item}</Link>
                         ) : (
                             item
                         )}
@@ -47,6 +75,8 @@ export function Footer() {
                 </a>
             </ButtonsWrapperFooter>
             </MenuFooter>
+            </ContentFooter>
+
         </Container>
     );
 }

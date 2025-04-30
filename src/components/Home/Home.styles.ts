@@ -8,6 +8,7 @@ export const Container = styled.div`
   background-color: transparent;
 `;
 
+
 export const BrandWrapper = styled.div`
   width: 100%;
   margin: 2rem auto;
@@ -20,7 +21,6 @@ export const Brand = styled.div`
   font-size: 11px;
   width: 93%;
   text-align: center;
-  padding: 12px;
   background-color: #060606;
   border: 1px solid #ffffff0d;
   color: #8a8a8a;
@@ -40,6 +40,7 @@ export const BlurTextWrapper = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (max-width: 767px) {
     padding-left: 10px;
@@ -49,15 +50,17 @@ export const BlurTextWrapper = styled.div`
 export const PerfilSection = styled.section`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 4rem 3rem;
   background-color: transparent;
   flex-wrap: wrap;
-  margin-top: 130px;
+  margin-top: 90px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    margin-top: 0;
+    padding: 2rem;
   }
 `;
 
@@ -90,7 +93,7 @@ export const TextBottom = styled.div`
   margin-bottom: 50px;
 
   @media (max-width: 767px) {
-    font-size: 70px;
+    font-size: 60px;
   }
 `;
 
@@ -98,8 +101,9 @@ export const TextAbout = styled.div`
   color: white;
   word-break: break-all;
   line-height: 1.4;
-  width: 80%;
+  width: 77%;
   font-size: 1.2rem;
+  text-align: center;
   `;
 
 export const ButtonContact = styled.div`
@@ -108,6 +112,7 @@ export const ButtonContact = styled.div`
     font-size: 1.3rem;
     cursor: pointer;
     transition: 0.3s;
+    text-align: center;
   
     :hover {
       color: #939292;
@@ -118,6 +123,8 @@ export const ButtonContact = styled.div`
 export const StyledVideo = styled.video`
   width: 100%;
   height: 680px;
+  object-fit: cover;
+  border-radius: 20px;
 
   @media (max-width: 767px) {
     height: 380px;

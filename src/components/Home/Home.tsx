@@ -1,5 +1,5 @@
 import { 
-    Container, 
+    Container,
     Brand, 
     BrandWrapper, 
     StyledVideo,
@@ -9,7 +9,6 @@ import {
     TextAbout,
     ButtonContact,
     PerfilSection,
-    FotoPerfil,
 
 } from "./Home.styles";
 
@@ -17,23 +16,39 @@ import { Projects } from "./Projects";
 
 import BlurText from "@/effects/BlurText";
 
-import MinhaFoto from '@assets/FotoPort.png';
+import videoBG from '@assets/videoBGnew.mp4'
+
+
 import { ArrowUpRight } from "phosphor-react";
 
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+
 
 
 export function Home() {
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
 
     return(
         <Container>
-
+            
             <BrandWrapper>
             <Brand>
             <StyledVideo
-            src="#"
+            src={videoBG}
             autoPlay
             loop
             muted
@@ -76,8 +91,6 @@ export function Home() {
             </TextAbout>
 
             </BlurTextWrapper>
-
-            <FotoPerfil src={MinhaFoto} /> 
 
             </PerfilSection>
             

@@ -5,6 +5,7 @@ import GitHubLogo from '@assets/GitHubLogo.svg';
 
 export const Container = styled.header`
   display: flex;
+  flex-direction: column;
   background-color: transparent;
   color: white;
   width: 100%;
@@ -17,6 +18,39 @@ export const Container = styled.header`
     justify-content: center;
     gap: 1rem;
     padding: 16px 8px;
+  }
+`;
+
+export const NameBrand = styled.div`
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.6s all;
+
+  h1 {
+    font-size: 10rem;
+    font-family: 'Inter', sans-serif; /* Fonte variável */
+    font-variation-settings: "wght" 900; /* Inicialmente 700 */
+    transition: font-variation-settings 0.4s ease-in-out; /* Transição suave para o peso da fonte */
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1);
+    transform-style: preserve-3d;
+  }
+
+  &:hover h1 {
+    font-weight: 100; /* Peso 100 no hover */
+    font-variation-settings: "wght" 100; /* Peso variável ajustado no hover */
+    font-size: 10rem; /* Tamanho fixo */
+    transition: font-variation-settings 0.4s ease-in-out; /* Transição suave do peso */
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1);
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 2.6rem;
+    }
+    &:hover h1 {
+      font-size: 2.6rem;
+    }
   }
 `;
 
@@ -62,10 +96,16 @@ export const MenuWrapper = styled.nav`
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: 0.3s all;
+    border: 1px solid #cccccc45;
+    padding: 10px;
+    border-radius: 10px;
 
     &:hover {
-      color: #ccc;
+      color: white;
+      background-color: gray;
+      transform: scale(1.1);
+      transition: 0.3s all;
     }
   }
 
@@ -136,15 +176,16 @@ export const StyledGitHubLogo = styled('img')({
   cursor: 'pointer',
   marginRight: '16px',
   transition: 'opacity 0.3s',
+  margin: '0 auto',
+  display: 'flex',
 
   '&:hover': {
     opacity: 0.7,
   },
 
   '@media (max-width: 768px)': {
-    width: '20px',
-    height: '20px',
-    marginRight: '8px',
+    width: '24px',
+    height: '24px',
   },
 });
 
@@ -152,7 +193,6 @@ export const ButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-right: 5rem;
 
   @media (max-width: 1024px) {
     margin-right: 2rem;
@@ -160,7 +200,6 @@ export const ButtonsWrapper = styled.div`
 
   @media (max-width: 768px) {
     margin-right: 0;
-    margin-top: 12px;
     justify-content: center;
   }
 `;
